@@ -20,4 +20,17 @@ class KeyManager {
         return key
     }
 
+    deleteKey(){
+        const key = this.conf.get('apiKey');
+
+        if(!key){
+            throw new Error('No API Key Found - Get a key at https://nomics.com');
+        }
+
+        this.conf.delete('apiKey');
+        return;
+    }
+
 }
+
+module.exports = KeyManager;
