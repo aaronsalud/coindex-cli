@@ -10,4 +10,9 @@ program
 .description('Show API Key')
 .action(()=> console.log('Hello from show'));
 
+program
+.command('remove')
+.description('Remove API Key')
+.action(()=> console.log('Hello from remove'));
+
 program.parse(process.argv);
