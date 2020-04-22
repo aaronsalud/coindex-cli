@@ -4,6 +4,8 @@ const check = require('../commands/check');
 program
 .command('price')
 .description('Check price of coins')
-.action(()=> check.price());
+.option('--coin <type>', 'Add specific coin types in CSV format', 'BTC, BSV, LTC')
+.option('--cur <currency>', 'Change the currency', 'CAD')
+.action(cmd=> check.price(cmd));
 
 program.parse(process.argv);
