@@ -9,7 +9,8 @@ const key = {
             {
                 type: 'input',
                 name:'key', 
-                message: 'Enter API Key '.green + 'https://nomics.com' 
+                message: 'Enter API Key '.green + 'https://nomics.com',
+                validate: isRequired 
             } 
         ]);
 
