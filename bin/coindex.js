@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
 const program = require('commander');
+const pkg = require('../package.json')
 
-program.version('1.0.0').parse(process.argv);
+program.version(pkg.version).parse(process.argv);
