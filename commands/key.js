@@ -32,7 +32,15 @@ const key = {
         }
     },
     remove(){
-        console.log('Hello from remove');
+        try{
+            const keyManager = new KeyManager();
+            keyManager.deleteKey();
+            console.log('API Key has been removed');
+            return;
+        }
+        catch(err){
+            console.error(err.message.red);
+        }
     }
 }
 
