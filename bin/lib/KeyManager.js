@@ -11,4 +11,13 @@ class KeyManager {
         return key;
     }
 
+    getKey(){
+        const key = this.conf.get('apiKey');
+
+        if(!key){
+            throw new Error('No API Key Found - Get a key at https://nomics.com');
+        }
+        return key
+    }
+
 }
